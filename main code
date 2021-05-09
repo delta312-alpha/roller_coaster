@@ -134,4 +134,6 @@ scatter_charter(data, 'speed', 'height')
 scatter_charter(data, 'height', 'speed')
 
 # what roller coaster seating type is most popular?
-unique_seats = data.seating_type.unique()
+ax = plt.subplots()
+data.seating_type.value_counts().sort_values().plot(kind = 'bar')
+plt.show()
